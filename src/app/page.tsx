@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card";
 import { topCategories } from "./components/topCategories";
 import ShoppexProps from "./components/shoppex/page";
 import Trending from "./components/trending/page";
+import Blog from "./components/Blog/page";
 
 export default function Home() {
   return (
@@ -366,7 +367,7 @@ export default function Home() {
         </section>
       </div>
 
-
+<Blog/>
 
 
     </main>
