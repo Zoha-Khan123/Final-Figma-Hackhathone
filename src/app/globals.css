@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+  --textColor : #1A0B5B
+}
+
+body{
+  max-width:1920px;
+  margin: auto;
+}
+
+
+main div h1,.textColor {
+ color: var(--textColor)
+}
+
+Card:hover{
+  @apply text-white
+}
