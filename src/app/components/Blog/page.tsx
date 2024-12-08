@@ -1,13 +1,13 @@
+import {blog} from '@/app/components/blog'
 import { Card } from '@/components/ui/card'
 import Image from 'next/image'
-import { blog } from '../blog'
 
 export default function Blog(){
     return(
         <section className="flex justify-center font-bold my-5">
             <div>
             <h1 className="textColor text-4xl flex justify-center items-center my-10">Latest Blog</h1>
-            <div  className='flex justify-center items-center gap-10'>
+            <div  className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10'>
                 {blog.map((blog,index)=>(
                     <Card key={index}>
                         <Image src={blog.image} height={300} width={300} alt='img'></Image>
