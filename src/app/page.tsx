@@ -8,19 +8,16 @@ import { Card } from "@/components/ui/card";
 import { topCategories } from "./components/topCategories";
 import ShoppexProps from "./components/shoppex/page";
 import Trending from "./components/trending/page";
-import Blog from "./components/Blog/page";
+import Blog from "./components/blog/page";
+import DiscountItem from "./components/discount/page";
+import NewsLetter from "./components/news-letter/page";
 
 export default function Home() {
   return (
     <main className="josefin">
-
-
-      <HomePage/>
-
-
+      <HomePage />
 
       {/* Featured Section */}
-
 
       <div className="flex justify-center items-center">
         <h1 className="text-4xl font-bold mt-24">Featured Products</h1>
@@ -41,24 +38,40 @@ export default function Home() {
                       className="w-full h-full object-contain bg-[#F6F7FB]"
                     />
 
-
-
                     {/* View Details Button */}
-                    <Link href={`components/dynamicpage/featuredproduct/${Product.id}`}>
-                    <div className="absolute flex justify-center items-center top-2 left-10 gap-2 transform -translate-x-1/2 duration-300 opacity-0 group-hover:opacity-100">
-                    <div>
-                      <Image src={'/cart.png'} width={25} height={25} alt="img"></Image>
-                    </div>
-                      <div>
-                      <Image src={'/uil_heart-alt.png'} width={15} height={15} alt="img"></Image>
+                    <Link
+                      href={`components/dynamicpage/featuredproduct/${Product.id}`}
+                    >
+                      <div className="absolute flex justify-center items-center top-2 left-10 gap-2 transform -translate-x-1/2 duration-300 opacity-0 group-hover:opacity-100">
+                        <div>
+                          <Image
+                            src={"/cart.png"}
+                            width={25}
+                            height={25}
+                            alt="img"
+                          ></Image>
+                        </div>
+                        <div>
+                          <Image
+                            src={"/uil_heart-alt.png"}
+                            width={15}
+                            height={15}
+                            alt="img"
+                          ></Image>
+                        </div>
+                        <div>
+                          <Image
+                            src={"/uil_search-plus.png"}
+                            width={15}
+                            height={15}
+                            alt="img"
+                          ></Image>
+                        </div>
                       </div>
-                      <div>
-                      <Image src={'/uil_search-plus.png'} width={15} height={15} alt="img"></Image>
-                      </div>
-                    </div>
-                    <button className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#08D15F] text-white text-xs font-semibold py-2 px-4 rounded transition-opacity duration-300 opacity-0 group-hover:opacity-100">View Details
-                    </button></Link>
-
+                      <button className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#08D15F] text-white text-xs font-semibold py-2 px-4 rounded transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                        View Details
+                      </button>
+                    </Link>
                   </div>
 
                   {/* Product Title */}
@@ -91,41 +104,29 @@ export default function Home() {
       <br />
       <br />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {/* Latest Product Section */}
 
-
       <div className="flex justify-center items-center mt-10">
-        <h1 className="text-textColor text-4xl font-bold mb-5">Latest Products</h1>
+        <h1 className="text-textColor text-4xl font-bold mb-5">
+          Latest Products
+        </h1>
       </div>
       <div>
         <ul className="flex justify-center items-center flex-wrap gap-4 md:gap-10 textColor]">
-          <li className="hover:text-[#FB2E86] text-sm transition ease-in-out duration-200 hover:underline">New Arrival</li>
-          <li className="hover:text-[#FB2E86] transition ease-in-out duration-200 hover:underline">Best Seller</li>
-          <li className="hover:text-[#FB2E86] transition ease-in-out duration-200 hover:underline">Featured</li>
-          <li className="hover:text-[#FB2E86] transition ease-in-out duration-200 hover:underline">Special Offer</li>
+          <li className="hover:text-[#FB2E86] text-sm transition ease-in-out duration-200 hover:underline">
+            New Arrival
+          </li>
+          <li className="hover:text-[#FB2E86] transition ease-in-out duration-200 hover:underline">
+            Best Seller
+          </li>
+          <li className="hover:text-[#FB2E86] transition ease-in-out duration-200 hover:underline">
+            Featured
+          </li>
+          <li className="hover:text-[#FB2E86] transition ease-in-out duration-200 hover:underline">
+            Special Offer
+          </li>
         </ul>
       </div>
-
 
       <div>
         <section className="flex justify-center">
@@ -143,9 +144,14 @@ export default function Home() {
                       className="w-full h-full object-contain bg-[#F7F7F7]"
                     />
                     {/* View Details Button */}
-                    <Link href={`components/dynamicpage/latestproduct/${Product.id}`}>  <button className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#08D15F] text-white text-xs font-semibold py-2 px-4 rounded transition-opacity duration-300 opacity-0 group-hover:opacity-100">View Details
-                    </button></Link>
-
+                    <Link
+                      href={`components/dynamicpage/latestproduct/${Product.id}`}
+                    >
+                      {" "}
+                      <button className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#08D15F] text-white text-xs font-semibold py-2 px-4 rounded transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                        View Details
+                      </button>
+                    </Link>
                   </div>
                   <div className="flex justify-between items-center">
                     {/* Product Title */}
@@ -155,7 +161,8 @@ export default function Home() {
 
                     {/* Product Price */}
                     <div className="price text-[var(--textColor)] flex justify-center items-center text-base my-2 transition-colors duration-300">
-                      $ {Product.price.toFixed(2)} <del className="ml-3 px-2 text-red-500">$65</del>
+                      $ {Product.price.toFixed(2)}{" "}
+                      <del className="ml-3 px-2 text-red-500">$65</del>
                     </div>
                   </div>
                 </Card>
@@ -165,31 +172,18 @@ export default function Home() {
         </section>
       </div>
 
+      <ShoppexProps />
 
-
-
-
-
-
-
-
-
-
-
-
-      <ShoppexProps/>
-
-
-              
-<Trending/>
-
-
+      <Trending />
+      <DiscountItem></DiscountItem>
+      
       {/* Trending Products */}
 
       <div className="flex justify-center items-center mt-24">
-        <h1 className="text-textColor text-4xl font-bold mb-5">Trending Products</h1>
+        <h1 className="text-textColor text-4xl font-bold mb-5">
+          Trending Products
+        </h1>
       </div>
-
 
       <div>
         <section className="flex items-center justify-center">
@@ -207,9 +201,14 @@ export default function Home() {
                       className="w-full h-full object-contain bg-[#F7F7F7]"
                     />
                     {/* View Details Button */}
-                    <Link href={`components/dynamicpage/trendingproduct/${Product.id}`}>  <button className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#08D15F] text-white text-xs font-semibold py-2 px-4 rounded transition-opacity duration-300 opacity-0 group-hover:opacity-100">View Details
-                    </button></Link>
-
+                    <Link
+                      href={`components/dynamicpage/trendingproduct/${Product.id}`}
+                    >
+                      {" "}
+                      <button className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#08D15F] text-white text-xs font-semibold py-2 px-4 rounded transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                        View Details
+                      </button>
+                    </Link>
                   </div>
                   <div className="flex flex-col justify-between items-center">
                     {/* Product Title */}
@@ -219,7 +218,8 @@ export default function Home() {
 
                     {/* Product Price */}
                     <div className="price text-[var(--textColor)] flex justify-center items-center text-base my-2 transition-colors duration-300">
-                      $ {Product.price.toFixed(2)} <del className="ml-3 px-2 text-[#1518754D]">$65</del>
+                      $ {Product.price.toFixed(2)}{" "}
+                      <del className="ml-3 px-2 text-[#1518754D]">$65</del>
                     </div>
                   </div>
                 </Card>
@@ -227,106 +227,90 @@ export default function Home() {
             ))}
           </div>
         </section>
-            <div className="flex justify-center items-center gap-2">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-                <div className="max-w-[420px] h-[270px] p-4 bg-[#31208A0D]">
-                  <p className="text-[26px] textColor">23% off in all products</p>
-                  <p className="text-[#FB2E86] underline">Shop Now</p>
-                  <Image 
-                  src={'/image-1162.png'} 
-                  height={180} 
-                  width={180} 
-                  alt="img"
-                  className="ml-24">
-                  </Image>
-                </div>
-                <div className="max-w-[420px] h-[270px] p-4 bg-[#31208A0D]">
-                  <p className="text-[26px] textColor">23% off in all products</p>
-                  <p className="text-[#FB2E86] underline">View Collection</p>
-                  <Image 
-                  src={'/image-1161.png'} 
-                  height={250} 
-                  width={250} 
-                  alt="img"
-                  className="ml-6 mt-16">
-                  </Image>
-                </div>
-                <div className="textColor  flex flex-col justify-center items-center">
-                  <div className="w-[267px] h-[74px] flex items-center my-1">
-                    <div>
-                    <Image
-                    src={'/image-30.png'}
+        <div className="flex justify-center items-center gap-2">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+            <div className="max-w-[420px] h-[270px] p-4 bg-[#31208A0D]">
+              <p className="text-[26px] textColor">23% off in all products</p>
+              <p className="text-[#FB2E86] underline">Shop Now</p>
+              <Image
+                src={"/image-1162.png"}
+                height={180}
+                width={180}
+                alt="img"
+                className="ml-24"
+              ></Image>
+            </div>
+            <div className="max-w-[420px] h-[270px] p-4 bg-[#31208A0D]">
+              <p className="text-[26px] textColor">23% off in all products</p>
+              <p className="text-[#FB2E86] underline">View Collection</p>
+              <Image
+                src={"/image-1161.png"}
+                height={250}
+                width={250}
+                alt="img"
+                className="ml-6 mt-16"
+              ></Image>
+            </div>
+            <div className="textColor  flex flex-col justify-center items-center">
+              <div className="w-[267px] h-[74px] flex items-center my-1">
+                <div>
+                  <Image
+                    src={"/image-30.png"}
                     width={90}
                     height={90}
                     alt="img"
                     className="bg-[#F5F6F8]"
-                    >
-                    </Image>
-                      </div>
-                      <div>
-                    <div >Executive Seat chair</div>
-                    <del className="text-xs">$32.00</del>
-                      </div>
-                  </div>
-                  <div className="w-[267px] h-[74px] flex items-center my-1">
-                    <div>
-                    <Image
-                    src={'/image-19.png'}
+                  ></Image>
+                </div>
+                <div>
+                  <div>Executive Seat chair</div>
+                  <del className="text-xs">$32.00</del>
+                </div>
+              </div>
+              <div className="w-[267px] h-[74px] flex items-center my-1">
+                <div>
+                  <Image
+                    src={"/image-19.png"}
                     width={90}
                     height={90}
                     alt="img"
                     className="bg-[#F5F6F8]"
-                    >
-                    </Image>
-                      </div>
-                      <div>
-                    <div>Executive Seat chair</div>
-                    <del className="text-xs">$32.00</del>
-                      </div>
-                  </div>
-                  <div className="w-[267px] h-[74px] flex items-center my-1">
-                    <div>
-                    <Image
-                    src={'/image-28.png'}
+                  ></Image>
+                </div>
+                <div>
+                  <div>Executive Seat chair</div>
+                  <del className="text-xs">$32.00</del>
+                </div>
+              </div>
+              <div className="w-[267px] h-[74px] flex items-center my-1">
+                <div>
+                  <Image
+                    src={"/image-28.png"}
                     width={100}
                     height={100}
                     alt="img"
                     className="bg-[#F5F6F8]"
-                    >
-                    </Image>
-                      </div>
-                      <div>
-                    <div>Executive Seat chair</div>
-                    <del className="text-xs">$32.00</del>
-                      </div>
-                  </div>
+                  ></Image>
+                </div>
+                <div>
+                  <div>Executive Seat chair</div>
+                  <del className="text-xs">$32.00</del>
                 </div>
               </div>
-              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <br />
       <br />
       <br />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {/* Top Categories*/}
 
       <div className="flex justify-center items-center mt-16">
-        <h1 className="text-textColor text-4xl font-bold mb-5">Top Categories</h1>
+        <h1 className="text-textColor text-4xl font-bold mb-5">
+          Top Categories
+        </h1>
       </div>
 
       <div>
@@ -345,9 +329,14 @@ export default function Home() {
                       className="w-full h-full rounded-full object-contain bg-[#31208A0D]"
                     />
                     {/* View Details Button */}
-                    <Link href={`components/dynamicpage/trendingproduct/${Product.id}`}>  <button className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-[#08D15F] text-white text-[10px] font-semibold py-2 px-4 rounded transition-opacity duration-300 opacity-0 group-hover:opacity-100">View Shop
-                    </button></Link>
-
+                    <Link
+                      href={`components/dynamicpage/trendingproduct/${Product.id}`}
+                    >
+                      {" "}
+                      <button className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-[#08D15F] text-white text-[10px] font-semibold py-2 px-4 rounded transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                        View Shop
+                      </button>
+                    </Link>
                   </div>
                   <div className="flex flex-col justify-between items-center">
                     {/* Product Title */}
@@ -366,10 +355,10 @@ export default function Home() {
           </div>
         </section>
       </div>
+      
+      <NewsLetter/>
 
-<Blog/>
-
-
+      <Blog />
     </main>
   );
 }
