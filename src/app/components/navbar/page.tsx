@@ -93,13 +93,13 @@ const Navbar = () => {
                   <DropdownMenu >
                     <DropdownMenuTrigger>Pages</DropdownMenuTrigger>
                     <DropdownMenuContent>
-                      <Link href={'/'} className="hover:text-[#FB2E86] hover:border-b-4 hover:border-[#FB2E86] transition-all duration-300 cursor-pointer">
+                      <Link href={'/pages/shop-grid-default'} className="hover:text-[#FB2E86] hover:border-b-4 hover:border-[#FB2E86] transition-all duration-300 cursor-pointer">
                         <DropdownMenuItem className="cursor-pointer">Grid Default</DropdownMenuItem>
                       </Link>
                       <Link href={'/pages/single-blog'} className="hover:text-[#FB2E86] hover:border-b-4 hover:border-[#FB2E86] transition-all duration-300 cursor-pointer">
                         <DropdownMenuItem className="cursor-pointer">Single Blog</DropdownMenuItem>
                       </Link>
-                      <Link href={'/'} className="hover:text-[#FB2E86] hover:border-b-4 hover:border-[#FB2E86] transition-all duration-300 cursor-pointer">
+                      <Link href={'/pages/shop-left-sidebar'} className="hover:text-[#FB2E86] hover:border-b-4 hover:border-[#FB2E86] transition-all duration-300 cursor-pointer">
                         <DropdownMenuItem className="cursor-pointer">Shop Left Sidebar</DropdownMenuItem>
                       </Link>
                     </DropdownMenuContent>
@@ -170,13 +170,13 @@ const Navbar = () => {
   <AccordionItem value="item-1">
     <AccordionTrigger className="m-0 p-0">Pages</AccordionTrigger>
     <AccordionContent className="mt-4">
-   <Link href={'/'}>Grid Default</Link>
+   <Link href={'/pages/shop-grid-default'}>Grid Default</Link>
     </AccordionContent>
     <AccordionContent>
    <Link href={'/pages/shop-blog'}>Single blog</Link>
     </AccordionContent>
     <AccordionContent>
-   <Link href={'/'}>Shop Left Sidebar</Link>
+   <Link href={'/pages/shop-left-sidebar'}>Shop Left Sidebar</Link>
     </AccordionContent>
   </AccordionItem>
 </Accordion>
