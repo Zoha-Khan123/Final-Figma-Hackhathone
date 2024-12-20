@@ -88,7 +88,7 @@ const Navbar = () => {
                   Home <IoIosArrowDown className="text-lg ml-1" />
                 </li>
               </Link>
-              <Link href={'/components/pages'}>
+            
                 <li className="flex items-center hover:text-[#FB2E86] hover:border-b-4 hover:border-[#FB2E86] transition-all duration-300 cursor-pointer">
                   <DropdownMenu >
                     <DropdownMenuTrigger>Pages</DropdownMenuTrigger>
@@ -107,7 +107,6 @@ const Navbar = () => {
                   <IoIosArrowDown className="text-lg ml-1" />
 
                 </li>
-              </Link>
               <li className="hover:text-[#FB2E86] hover:border-b-4 hover:border-[#FB2E86] transition-all duration-300 cursor-pointer">
                 Products
               </li>
