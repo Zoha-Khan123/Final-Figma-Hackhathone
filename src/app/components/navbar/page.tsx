@@ -172,7 +172,7 @@ const Navbar = () => {
    <Link href={'/pages/shop-grid-default'}>Grid Default</Link>
     </AccordionContent>
     <AccordionContent>
-   <Link href={'/pages/shop-blog'}>Single blog</Link>
+   <Link href={'/pages/single-blog'}>Single blog</Link>
     </AccordionContent>
     <AccordionContent>
    <Link href={'/pages/shop-left-sidebar'}>Shop Left Sidebar</Link>
@@ -184,7 +184,7 @@ const Navbar = () => {
             <li className="hover:border-b-4 hover:border-[#FB2E86] transition-all duration-300 cursor-pointer">
               Products
             </li>
-            <Link href="pages/blog">
+            <Link href="/pages/blog">
             <li className="hover:border-b-4 hover:border-[#FB2E86] transition-all duration-300 cursor-pointer">
               Blog
             </li>
